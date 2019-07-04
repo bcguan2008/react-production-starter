@@ -10,7 +10,9 @@
     "start:prod": "cross-env NODE_ENV=production node ./build/server.js",
     "heroku-postbuild": "npm run build",
     "build": "webpack -p --config ./tools/webpack.client.prod.js && webpack -p --config ./tools/webpack.server.prod.js",
-    "clean": "rm -rf build"
+    "clean": "rm -rf build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -62,7 +64,8 @@
     "throng": "^4.0.0",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.10.0"
+    "webpack-hot-middleware": "^2.10.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-plugin-istanbul": "^2.0.0",
@@ -88,5 +91,6 @@
       "**/tools/**",
       "**/test/**"
     ]
-  }
+  },
+  "snyk": true
 }
