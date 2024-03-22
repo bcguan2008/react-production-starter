@@ -61,7 +61,7 @@
     "standard": "^8.0.0",
     "throng": "^4.0.0",
     "webpack": "^1.13.1",
-    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-middleware": "^5.3.4",
     "webpack-hot-middleware": "^2.10.0"
   },
   "devDependencies": {
